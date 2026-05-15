@@ -9,39 +9,46 @@ Adding a new model requires **no changes** to `train.py`, `test.py`, or any util
 
 ```
 seg_framework/
-├── configs/
-│   ├── unet.yaml              ← Hyperparameters, paths, loss, scheduler for UNet
-│   └── segnet.yaml            ← Same for SegNet
+├── configs/						       ← Input, output, model, and dataset specific hyper-parameter setting
+│   ├── model1.yaml             
+│   └── model2.yaml             
 ├── datasets/
 │   ├── images/                ← Input images (.jpg .png .tif)
 │   └── ground_truths/         ← Masks with matching filenames
-├── logs/
-│   └── <model>_<dataset>/
-│       ├── metrics.csv        ← Per-epoch metrics
-│       ├── *.log              ← Console log file
-│       └── checkpoints/       ← best_model.pth (+ per-epoch if save_best_only=false)
+├── logs/							         ← Results and models saved location
+│   └── <model1>_<dataset>/
+│       ├── Time_stamp1
+│       		├── fold_1
+│       			  ├── checkpoints
+│       			  ├── metrics.csv
+│       			  ├── model_fold1.log
+│       			  ├── test_results.csv
+│       		├── fold_2
+│       		├── fold_3
+│       		├── fold_4
+│       		├── fold_5
+│       		├── summary.csv   ← Per-epoch metrics across folds
+│       ├── Time_stamp2 
+│   └── <model2>_<dataset>/
 ├── modules/
 │   ├── __init__.py            ← MODEL_REGISTRY + get_model()
-│   ├── unet/
-│   │   ├── unet_model.py
-│   │   └── unet_parts.py
-│   └── segnet/
-│       ├── segnet_model.py
-│       └── segnet_parts.py
-├── process/
-│   ├── __init__.py            ← PROCESS_REGISTRY + get_process()
-│   ├── unet/
-│   │   └── unet.py            ← UNetProcess (train, eval, predict, checkpointing)
-│   └── segnet/
-│       └── segnet.py          ← SegNetProcess (inherits UNetProcess)
+│   ├── model1/
+│       ├── model.py 
+│   ├── model2/
+│       ├── model.py  
 ├── utils/
-│   ├── config.py              ← load_config(), dot-access ConfigDict, validation
+│   ├── __init__.py 
+│   ├── augmentations.py       ← Joint image+mask augmentations          
+│   ├── config.py              ← load_config(), ConfigDict, validation
 │   ├── dataset.py             ← SegmentationDataset + build_dataloaders()
-│   ├── augmentations.py       ← Joint image+mask augmentations
+│   ├── logger.py              ← Console/file logger + CSVLogger
 │   ├── metrics.py             ← IoU, Dice, Pixel Accuracy, MetricTracker
-│   └── logger.py              ← Console/file logger + CSVLogger
+│   └── train_utils.py         ← Loss function definition and other training related supporting utilities
+├── infer.py
+├── test.py
 ├── train.py
-└── test.py
+├── requirements.txt
+└── README.md
 ```
 
 ---
