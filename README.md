@@ -54,11 +54,16 @@ The segmentation framework enables pixel-level identification of SRC regions usi
 
 | RGB Image | Ground Truth Mask |
 |:---------:|:-----------------:|
-| ![Input image](images/input.png) | ![Ground truth mask](images/groundtruth.png) |
+| ![Input image](images/Ground_truth_1.png) | ![Ground truth mask](images/Mask_1.png) |
+| ![Input image](images/Ground_truth_2.png) | ![Ground truth mask](images/Mask_2.png) |
  
 ### Output
 - Predicted segmentation mask
 - Pixel-level classification map
+
+| Predicted Segmentation Mask |
+|:--------------------------:|
+| ![Predicted output](images/predictions_grid.png) |
 
 --- 
 
