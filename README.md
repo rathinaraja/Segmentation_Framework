@@ -35,6 +35,12 @@ This enables detailed tissue or object-level understanding within complex images
 
 ---
 
+## Signet Ring Cell Region Detection
+
+The following images show semantic segmentation for signet ring cell (SRC) carcinoma region detection from histopathology whole-slide images. Signet ring cells are characterized by mucin-filled cytoplasm and displaced nuclei, making precise localization important for pathological assessment and disease characterization.
+
+The segmentation framework enables pixel-level identification of SRC regions using annotated binary masks and deep learning-based semantic segmentation models.
+
 ## Framework Pipeline
 
 ### Input
@@ -42,7 +48,14 @@ This enables detailed tissue or object-level understanding within complex images
 - Ground truth annotation:
   - Binary mask
   - Pixel-wise segmentation mask
+  - Mask pixel values: integer class indices (`0`, `1`, `2`, ...)
+ 
+## Input
 
+| RGB Image | Ground Truth Mask |
+|:---------:|:-----------------:|
+| ![Input image](images/input.png) | ![Ground truth mask](images/groundtruth.png) |
+ 
 ### Output
 - Predicted segmentation mask
 - Pixel-level classification map
