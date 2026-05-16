@@ -144,9 +144,11 @@ seg_framework/
 pip install -r requirements.txt
 ```
 
-Or manually:
-```bash
-pip install torch torchvision pyyaml pillow numpy
+Or  
+
+```bash 
+conda env create -f environment.yml
+conda activate seg_framework
 ```
 
 ### 2. Organise Your Data
