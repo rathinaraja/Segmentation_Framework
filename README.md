@@ -9,6 +9,33 @@
 
 ---
 
+## Table of Contents
+
+- [What is Semantic Segmentation?](#what-is-semantic-segmentation)
+  - [Binary Segmentation](#binary-segmentation-2-class)
+  - [Multi-Class Segmentation](#multi-class-segmentation-3-class-or-more)
+- [Signet Ring Cell Region Detection](#signet-ring-cell-region-detection)
+- [Framework Pipeline](#framework-pipeline)
+- [Implemented Models](#implemented-models)
+- [Key Features](#key-features)
+- [Applications](#applications)
+- [Project Structure](#project-structure)
+- [Quick Start](#quick-start)
+  - [1. Install Dependencies](#1-install-dependencies)
+  - [2. Organise Your Data](#2-organise-your-data)
+  - [3. Configure](#3-configure)
+  - [4. Train](#4-train)
+  - [5. Evaluate](#5-evaluate)
+- [Configuration Reference](#configuration-reference)
+  - [Loss Functions](#loss-functions)
+  - [Optimizers](#optimizers)
+  - [Schedulers](#schedulers)
+- [Augmentations](#augmentations)
+- [Adding a New Model](#adding-a-new-model)
+- [Output Files](#output-files)
+
+---
+
 ## What is Semantic Segmentation?
 
 Semantic segmentation is a pixel-level image analysis task where each pixel in an image is assigned to a specific class label. Unlike image classification, semantic segmentation identifies the exact spatial regions corresponding to objects or tissues within the image.
