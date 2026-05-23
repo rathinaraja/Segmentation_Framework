@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Models](https://img.shields.io/badge/Models-8%20Architectures-purple?style=flat-square)](#implemented-models)
 
----
+--- 
   
 ## Table of Contents
 
