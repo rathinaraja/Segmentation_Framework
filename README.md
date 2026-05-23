@@ -1,5 +1,5 @@
 # 🔬 SegFramework — Semantic Segmentation for Medical & Histopathology Imaging
-
+  
 > A modular, production-ready deep learning framework for pixel-level image segmentation — supporting CNN and Transformer architectures with a unified training pipeline.
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square)](https://www.python.org/)
