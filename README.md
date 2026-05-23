@@ -8,7 +8,7 @@
 [![Models](https://img.shields.io/badge/Models-8%20Architectures-purple?style=flat-square)](#implemented-models)
 
 ---
-
+  
 ## Table of Contents
 
 - [What is Semantic Segmentation?](#what-is-semantic-segmentation)
